@@ -47,8 +47,6 @@ export class WordComponent implements OnInit {
     }
 
     ngOnInit() {
-        // Edit here - For debug!
-        this.consumeLetters((letter: string) => console.log(`Consume : ${letter}`));
 
         // Stores keys that we've already used.
         this.consumeLetters((letter: string) => this.usedKeySet.add(letter));
