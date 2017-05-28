@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+}
+/*Hangman container*/
+.hangman{
+    width: 230px;
+    height: 480px;
+    padding: 30px;
+}
+/*Hangman bar*/
+.hangman__bar{
+    width: 240px;
+    height: 20px;
+    background: #53555d;
+    border-radius: 0 5px 5px 0;
+    padding-bottom: 20px;
+    transform: translate(-60px,-30px);
+    position: relative;
+    z-index: 0;
+}
+.hangman__bar::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 40px;
+    background: #53555d;
+    position: absolute;
+    top:100%;
+    right: 30px;
+}
+/*Hangman head*/
+.hangman__head{
+    height: 215px;
+    width: 140px;
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+   background: #ffcd8a;
+background: -moz-linear-gradient(top, #ffcd8a 50%, #e4bd8a 50%);
+background: -webkit-linear-gradient(top, #ffcd8a 50%,#e4bd8a 50%);
+background: linear-gradient(to bottom, #ffcd8a 50%,#e4bd8a 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcd8a', endColorstr='#e4bd8a',GradientType=0 );
+}
+.hairs{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50%;
+border-radius: 100px 100px 0 0;
+}
+.hairs-right{
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(60%,-10%) rotate(-15deg);
+    width: 50px;
+    height:100px;
+    border-radius: 100%;
+    background: #e4bd8a;
+}
+.hairs-left{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-60%,-10%) rotate(15deg);
+    width: 50px;
+    height:100px;
+    border-radius: 100%;
+    background: #e4bd8a;
+}
+.ear-right{
+    position: absolute;
+    top:50%;
+    right:-25px;
+    transform: translateY(-50%);
+    background: #ffcd8a;
+    height: 40px;
+    width: 25px;
+    border-radius:0 25px 25px 0;
+    z-index: 0;
+    padding: 5px;
+}
+.ear-right::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:10px;
+    bottom: 10px;
+    left:0;
+    width: 12px;
+    border-radius: 0 50% 50% 0;
+    background: #febc71;
+}
+.ear-left{
+    position: absolute;
+    top:50%;
+    left:-25px;
+    transform: translateY(-50%);
+    background: #ffcd8a;
+    height: 40px;
+    width: 25px;
+    border-radius:25px 0 0 25px;
+    z-index: 0;
+    padding: 5px;
+}
+.ear-left::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:10px;
+    bottom: 10px;
+    right:0;
+    width: 12px;
+    border-radius: 50% 0 0 50%;
+    background: #febc71;
+}
+.eyes{
+    position: absolute;
+    top: 50%;
+    left:0;
+    right:0;
+    height: 40px;
+    background: #ffcd8a;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+.eye{
+    width:15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+}
+.ears__inner{
+    background: #ffbe71;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+}
+.cheek-right{
+    background: #ffcd8a;
+    width: 50%;
+    height: 25px;
+    border-radius: 35px;
+    position: absolute;
+    top:50%;
+    right: 10px;
+    z-index: 0;
+    transform: rotate(15deg);
+}
+.cheek-left{
+    background: #ffcd8a;
+    width: 50%;
+    height: 25px;
+    border-radius: 35px;
+    position: absolute;
+    top:50%;
+    left: 10px;
+    z-index: 0;
+    transform: rotate(-15deg);
+}
+.nose{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 20px;
+    height: 50px;
+    z-index: 0;
+    border-radius: 50px;
+    transform: translate(-50%,-30%);
+    background: #ffcd8a;
+}
+.mouth{
+    width: 36px;
+    height: 18px;
+    background: #fff;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    bottom:24%;
+    left:50%;
+    transform: translateX(-50%);
+}
+/*Hangman neck*/
+.hangman__neck{
+    background: #ffcd8a;
+    width: 45px;
+    height: 65px;
+    margin: 0 auto;
+    border-radius: 10px;
+    transform: translateY(-15px);
+}
+/*Hangman corpus*/
+.hangman__corpus{
+    width: 105px;
+    height: 165px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    transform: translateY(-50px);
+}
+.left-part{
+    width: 50%;
+    height: 75%;
+    background: #88c357;
+    position: relative;
+    border-radius: 10px 0 0 0;
+}
+.right-part{
+    width: 50%;
+    height: 75%;
+    background: #4a9d6a;
+    position: relative;
+    border-radius:0 10px 0 0;    
+}
+.bottom-part{
+    width: 100%;
+    height: 25%;
+    background: #3b5c92;
+    position: relative;
+    border-radius:0 0 10px 10px;    
+}
+
+/*Hangman arms*/
+.hangman__left-arm{
+    position: absolute;
+    top:30%;
+    left:-160%;
+    transform: rotate(-45deg);
+    z-index: 0;
+    background: #88c357;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px 5px 0 5px;
+    z-index: 1;
+}
+.hangman__right-arm{
+    position: absolute;
+    top:30%;
+    right:-160%;
+    transform: rotate(45deg);
+    z-index: 0;
+    background: #4a9d6a;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px 5px 5px 0;
+    z-index: 1;
+}
+/*Hangman hands*/
+.hangman__left-hand{
+    height: 25px;
+    width: 25px;
+    background: #ffcd8a;
+    border-radius: 50%;
+    position: absolute;
+    left: -155%;
+    bottom: 10%;
+    z-index: 0;
+}
+.hangman__right-hand{
+    height: 25px;
+    width: 25px;
+    background: #ffcd8a;
+    border-radius: 50%;
+    position: absolute;
+    right: -155%;
+    bottom: 10%;
+    z-index: 0;
+}
+/*Hangman legs*/
+.legs{
+    position: absolute;
+    top:80%;
+    left: 0;
+    right: 0;
+    height: 130px;
+}
+.hangman__left-leg{
+    position: absolute;
+    top:0;
+    left: -15%;
+    background: #3b5c92;
+    height: 130px;
+    width: 45px;
+    transform: rotate(15deg);
+    border-radius:0 0 10px 10px;
+    z-index: 1;
+}
+.hangman__right-leg{
+    position: absolute;
+    top:0;
+    right: -15%;
+    background: #3b5c92;
+    height: 130px;
+    width: 45px;
+    transform: rotate(-15deg);
+    border-radius:0 0 10px 10px;
+    z-index: 1;
+}
+.hangman__left-foot{
+    position: absolute;
+    top:85%;
+    left: -55%;
+    background: #ffcd8a;
+    height: 25px;
+    width: 65px;
+    border-radius: 10px;
+    transform:rotate(10deg);
+    z-index: 0;
+}
+.hangman__right-foot{
+    position: absolute;
+    top:85%;
+    right: -55%;
+    background: #ffcd8a;
+    height: 25px;
+    width: 65px;
+    border-radius: 10px;
+    transform:rotate(-10deg);
+    z-index: 0;
+}

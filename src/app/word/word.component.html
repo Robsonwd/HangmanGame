@@ -1,0 +1,11 @@
+<div class="letters-wrapper">
+    <ul class="background-letters">
+        <li class="background-letters__letter" *ngFor="let letter of backgroundLetters"></li>  
+    </ul>
+    <ul class="letters-list">
+        <li class="letters-list__letter" *ngFor="let letter of statusInfo.guessWord">
+            <span>{{letter}}</span>
+        </li>
+    </ul>
+</div>
+

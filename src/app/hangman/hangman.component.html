@@ -1,0 +1,44 @@
+<div class="hangman">
+    <div class="hangman__bar"></div>
+    <div class="hangman-body">
+        <div class="hangman-head" *ngIf="bodyPart >= 1">
+            <div class="hangman-head__hairs">
+                <div class="hangman-head__hairs-part hangman-head__hairs-part--right"></div>
+                <div class="hangman-head__hairs-part hangman-head__hairs-part--left"></div>
+            </div>
+            <div class="hangman-head__ear hangman-head__ear--right">
+            <div class="ring ring--ear-right"></div>                
+            </div>
+            <div class="hangman-head__ear hangman-head__ear--left"></div>
+            <div class="hangman-head__eyes">
+                <div class="hangman-head__eye"></div>
+                <div class="hangman-head__eye"></div>
+            </div>
+            <div class="hangman-head__cheek hangman-head__cheek--right"></div>
+            <div class="hangman-head__cheek hangman-head__cheek--left"></div>
+            <div class="hangman-head__nose"></div>
+            <div class="hangman-head__mouth">
+                <div class="ring ring--mouth"></div>
+            </div>           
+        </div>
+        <div class="hangman-neck" *ngIf="bodyPart >= 2"></div>
+        <div class="hangman-corpus" *ngIf="bodyPart >= 3">
+            <div class="hangman-corpus__half hangman-corpus__half--left">
+                <div class="hangman-corpus__arm hangman-corpus__arm--left" *ngIf="bodyPart >= 6"></div>
+                <div class="hangman-corpus__hand hangman-corpus__hand--left" *ngIf="bodyPart >= 7"></div>                
+            </div>
+            <div class="hangman-corpus__half hangman-corpus__half--right">
+                <div class="hangman-corpus__arm hangman-corpus__arm--right" *ngIf="bodyPart >= 4"></div>
+                <div class="hangman-corpus__hand hangman-corpus__hand--right" *ngIf="bodyPart >= 5"></div>                
+            </div>
+            <div class="hangman-corpus__bottom">
+                <div class="hangman-corpus__legs">
+                    <div class="hangman-corpus__leg hangman-corpus__leg--left" *ngIf="bodyPart >= 10"></div>
+                    <div class="hangman-corpus__foot hangman-corpus__foot--left" *ngIf="bodyPart >= 11"></div>
+                    <div class="hangman-corpus__leg hangman-corpus__leg--right"*ngIf="bodyPart >= 8"></div>
+                    <div class="hangman-corpus__foot hangman-corpus__foot--right" *ngIf="bodyPart >= 9"></div>     
+                </div>           
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.letters-wrapper{
+    position: relative;
+    z-index: 1;
+}
+.background-letters{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.letters-list{
+    @extend .background-letters;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+}
+.letters-list__letter{
+    box-sizing: border-box;
+    display: flex;
+    width: 80px;;
+    min-height: 90px;
+    background: #52545c;
+    color:#fff;
+    padding: 30px;
+    margin: 3px;
+    font-size: 28px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.background-letters__letter{
+    @extend .letters-list__letter;
+    background: #bababb;
+}

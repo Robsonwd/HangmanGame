@@ -1,0 +1,10 @@
+<div class="game-status" *ngIf="!statusInfo.active">
+    <div class="game-status__title">
+        {{statusInfo.caption}}
+    </div>
+    <button
+        class="game-status__button"
+        (click)="newGameSubject.next($event)">
+        New Word
+    </button>
+</div>
