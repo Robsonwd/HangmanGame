@@ -3,7 +3,7 @@ $missedLetterColor: #4c6ff5;
 
 .missed-letters__title{
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 14px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -12,10 +12,21 @@ $missedLetterColor: #4c6ff5;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 .letters-list__letter{
     text-transform: uppercase;
-    font-size: 38px;
+    font-size: 18px;
     color: $missedLetterColor;
     padding: 5px;
+}
+@media screen and (min-width:768px){
+    .missed-letters__title{
+        font-size: 20px;
+    }
+
+    .letters-list__letter{
+        font-size: 38px;
+    }
+    
 }

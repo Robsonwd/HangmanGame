@@ -13,7 +13,7 @@
 }
 .game-status__title{
     color:#fff;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     padding-bottom: 15px;
     text-align: center;
@@ -28,4 +28,10 @@
     font-weight: 700;
     background: transparent;
     cursor: pointer;
+}
+@media screen and (min-width:768px){
+    .game-status__title{
+        font-size: 50px;  
+    }
+    
 }

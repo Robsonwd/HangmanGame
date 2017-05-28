@@ -33,6 +33,11 @@ $bottomBodyPartColor: #3b5c92;
     position: relative;
     z-index: 0;
 }
+@media screen and (min-width:768px){
+    .hangman__bar{
+        transform: translate(-30px,-15px);        
+    }
+}
 .hangman__bar::after{
     content: '';
     display: block;

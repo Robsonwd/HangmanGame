@@ -3,12 +3,12 @@
 }
 .app-wrapper{
     max-width: 1024px;
-    padding:60px 30px;
+    padding:30px;
     background: #f5f5f5;
     border-radius: 5px;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.35);
     display: flex;
-    flex-direction: row;
+    // flex-direction: column;
     flex-wrap: wrap;
     position: relative;
 }
@@ -20,16 +20,29 @@
     right: 0;
     width: 0; 
     height: 0; 
-    border-bottom: 300px solid #4d71fa; 
-    border-left: 250px solid transparent;
+    border-bottom: 200px solid #4d71fa; 
+    border-left: 150px solid transparent;
 }
+
+@media screen and (min-width:768px){
+    .app-wrapper{
+        padding: 60px 30px;
+        flex-direction: row;        
+    }
+    .app-wrapper::after{
+        border-bottom: 300px solid #4d71fa; 
+        border-left: 250px solid transparent;
+    }
+}
+
 .app-hangman{
-    width: 50%;
+    width: 70%;
 }
 .app-missed-letters{
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     color:#52545c;
 }
@@ -39,4 +52,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+@media screen and (min-width:768px){
+    .app-hangman,
+    .app-missed-letters{
+        width: 50%;
+    }
+    .app-missed-letters{
+        align-items: flex-start;   
+    }
 }
